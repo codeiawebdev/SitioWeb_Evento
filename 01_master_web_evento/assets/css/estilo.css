@@ -1,0 +1,1036 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+body {
+    background: #fff;
+    color: #2f3138;
+    font-family: "Open Sans", sans-serif;
+}
+
+a {
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+p {
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+    padding: 0;
+    color: rgb(14, 27, 77);
+}
+
+.main-page {
+    margin-top: 70px;
+}
+
+/*--------------------------------------------------------------
+  # Spinner
+--------------------------------------------------------------*/
+
+.custom-container-spinner {
+    background-color: #060c22;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+.custom-container-spinner .spinner-border {
+    height: 60px;
+    width: 60px;
+}
+
+/*--------------------------------------------------------------
+  # Barra de Desplazamiento
+--------------------------------------------------------------*/
+
+
+/* Oculta la barra de desplazamiento */
+body {
+    scrollbar-width: thin;
+    /* Para navegadores basados en Firefox */
+    scrollbar-color: transparent transparent;
+    /* Para navegadores basados en Firefox */
+    overflow: auto;
+    /* Permite el desplazamiento */
+}
+
+/* Personaliza la apariencia de la barra de desplazamiento para navegadores basados en WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 8px;
+    /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    /* Color del fondo de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 25, 90);
+    /* Color del pulgar de la barra de desplazamiento */
+}
+
+.offcanvas {
+    background-color: rgb(30, 80, 220);
+}
+
+.offcanvas .offcanvas-header {
+    border-bottom: 4px solid #fefefe;
+}
+
+/*--------------------------------------------------------------
+  # Sections Header
+--------------------------------------------------------------*/
+
+.section-header {
+    margin-bottom: 60px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.section-header::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 5px;
+    background-color: rgb(0, 54, 220);
+    bottom: 0;
+    left: calc(50% - 25px);
+}
+
+.section-header h2 {
+    font-size: 36px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #9195a2;
+}
+
+.section-with-bg {
+    background-color: #f6f7fd;
+}
+
+/*--------------------------------------------------------------
+  # Header
+--------------------------------------------------------------*/
+
+.custom-navbar {
+    background-color: rgb(30, 80, 220);
+    height: 80px;
+    margin: 20px;
+    border-radius: 16px;
+    padding: 0.5rem;
+}
+
+.custom-logo,
+.custom-logo-canvas {
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    transition: 0.3s color ease;
+}
+
+.custom-logo:hover {
+    color: rgb(255, 255, 0);
+}
+
+.custom-login-button {
+    background-color: rgb(255, 255, 255);
+    color: rgb(14, 27, 77);
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+
+.custom-login-button:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(30, 80, 220);
+}
+
+.custom-menu-button {
+    color: rgb(255, 255, 255);
+    border: none;
+    font-size: 2.25rem;
+}
+
+.custom-close-button {
+    background-color: transparent;
+    border: none;
+}
+
+.custom-close-button span {
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+}
+
+.custom-menu-button:focus,
+.custom-close-button:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.custom-nav-memu .nav-link {
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    position: relative;
+}
+
+.custom-nav-memu .nav-link:hover,
+.custom-nav-memu .nav-link.active {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+
+@media (min-width: 991px) {
+    .custom-nav-memu .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: rgb(255, 255, 255);
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .custom-nav-memu .nav-link:hover::before,
+    .custom-nav-memu .nav-link.active::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+
+/*--------------------------------------------------------------
+  # Intro Section
+--------------------------------------------------------------*/
+
+#inicio {
+    width: 100%;
+    height: 100vh;
+    background: url(../img/banner/bg.jpg) top center;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+
+#inicio:before {
+    content: "";
+    background: rgba(6, 12, 34, 0.8);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#inicio .inicio-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 90px;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 15px;
+}
+
+#inicio h1 {
+    color: #fff;
+    font-family: "Raleway", sans-serif;
+    font-size: 56px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#inicio h3 span {
+    color: rgb(0, 54, 220);
+}
+
+#inicio p {
+    color: #ebebeb;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+@-webkit-keyframes pulsate-btn {
+    0% {
+        -webkit-transform: scale(0.6, 0.6);
+        transform: scale(0.6, 0.6);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+        opacity: 0;
+    }
+}
+
+@keyframes pulsate-btn {
+    0% {
+        -webkit-transform: scale(0.6, 0.6);
+        transform: scale(0.6, 0.6);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+        opacity: 0;
+    }
+}
+
+/*--------------------------------------------------------------
+  # Evento Section
+--------------------------------------------------------------*/
+
+#evento {
+    background: url("../img/evento/evento.jpg");
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    padding: 60px 0 40px 0;
+}
+
+#evento:before {
+    content: "";
+    background: rgba(13, 20, 41, 0.8);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#evento h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+#evento h3 {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+#evento p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/*--------------------------------------------------------------
+  # Ponentes Section
+--------------------------------------------------------------*/
+
+#ponentes {
+    padding: 60px 0px 30px;
+}
+
+#ponentes .custom-carousel-ponente .speaker {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 50%;
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+#ponentes .custom-carousel-ponente .speaker img {
+    height: 100%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    margin-left: 50%;
+    transition: all ease-in-out 0.3s;
+}
+
+#ponentes .carousel-inner {
+    padding: 1em;
+}
+
+@media screen and (min-width: 576px) {
+    #ponentes .carousel-inner {
+        display: flex;
+        width: 90%;
+        margin-inline: auto;
+        padding: 1em 0;
+        overflow: hidden;
+    }
+
+    #ponentes .carousel-item {
+        display: block;
+        margin-right: 0;
+        flex: 0 0 calc(100% / 2);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #ponentes .carousel-item {
+        display: block;
+        margin-right: 0;
+        flex: 0 0 calc(100% / 3);
+    }
+}
+
+#ponentes .carousel .card {
+    margin: 0 0.5em;
+    border: 0;
+}
+
+#ponentes .carousel-control-prev,
+#ponentes .carousel-control-next {
+    width: 3rem;
+    height: 3rem;
+    background-color: grey;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/*--------------------------------------------------------------
+  # Cronograma Section
+  --------------------------------------------------------------*/
+
+#cronograma {
+    padding: 60px 0 60px 0;
+}
+
+#cronograma .nav-tabs {
+    text-align: center;
+    margin: auto;
+    display: block;
+    border-bottom: 0;
+    margin-bottom: 30px;
+}
+
+#cronograma .nav-tabs li {
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+#cronograma .nav-tabs a {
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    background-color: rgb(14, 27, 77);
+    color: #fff;
+    padding: 10px 50px;
+}
+
+#cronograma .nav-tabs a.active {
+    background-color: rgb(0, 33, 135);
+    color: #fff;
+}
+
+#cronograma .sub-heading {
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+    margin: 0 auto 30px auto;
+}
+
+#cronograma .tab-pane {
+    transition: ease-in-out .2s;
+}
+
+#cronograma .cronograma-item {
+    border-bottom: 1px solid #cad4f6;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition: background-color ease-in-out 0.3s;
+}
+
+#cronograma .cronograma-item:hover {
+    background-color: #fff;
+}
+
+#cronograma .cronograma-item time {
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+#cronograma .cronograma-item .speaker {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 50%;
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+#cronograma .cronograma-item .speaker img {
+    height: 100%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    margin-left: 50%;
+    transition: all ease-in-out 0.3s;
+}
+
+#cronograma .cronograma-item h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+#cronograma .cronograma-item h4 span {
+    font-style: italic;
+    color: #19328e;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+#cronograma .cronograma-item p {
+    font-style: italic;
+    color: #152b79;
+    margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+  # Lugar Section
+--------------------------------------------------------------*/
+
+#lugar {
+    padding: 60px 0;
+}
+
+#lugar .container-fluid {
+    margin-bottom: 3px;
+}
+
+#lugar .lugar-map iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+}
+
+#lugar .lugar-info {
+    background: url("../img/lugar/001.jpg") top center no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+#lugar .lugar-info:before {
+    content: "";
+    background: rgba(13, 20, 41, 0.8);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#lugar .lugar-info h3 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+}
+
+#lugar .lugar-info p {
+    color: #fff;
+    margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+  # F.A.Q Section
+--------------------------------------------------------------*/
+
+#faq {
+    padding: 60px 0;
+}
+
+#faq #faq-list {
+    padding: 0;
+    list-style: none;
+}
+
+#faq #faq-list li {
+    border-bottom: 1px solid #ddd;
+}
+
+#faq #faq-list a {
+    color: #0a58ca;
+    padding: 18px 0;
+    display: block;
+    position: relative;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    padding-right: 20px;
+}
+
+#faq #faq-list i {
+    font-size: 24px;
+    position: absolute;
+    right: 0;
+    top: 16px;
+}
+
+#faq #faq-list p {
+    margin-bottom: 20px;
+}
+
+#faq #faq-list a.collapsed {
+    color: #000;
+}
+
+#faq #faq-list a.collapsed i::before {
+    content: "\ebc1";
+}
+
+/*--------------------------------------------------------------
+  # Subscribe Section
+--------------------------------------------------------------*/
+
+#subscribe {
+    padding: 60px;
+    background: url(../img/subscribe/001.jpg) center center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+
+#subscribe:before {
+    content: "";
+    background: rgba(6, 12, 34, 0.6);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#subscribe .section-header h2,
+#subscribe p {
+    color: #fff;
+}
+
+#subscribe input {
+    background: #fff;
+    color: #060c22;
+    border: 0;
+    outline: none;
+    margin: 0;
+    padding: 9px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+}
+
+#subscribe button {
+    border: 0;
+    padding: 9px 25px;
+    cursor: pointer;
+    background-color: rgb(0, 54, 220);
+    color: #fff;
+    transition: all 0.3s ease;
+    outline: none;
+    font-size: 14px;
+    border-radius: 50px;
+}
+
+#subscribe button:hover {
+    background-color: rgb(0, 101, 210);
+}
+
+/*--------------------------------------------------------------
+  # Inscripciones Section
+--------------------------------------------------------------*/
+
+#inscripciones {
+    padding: 60px 0;
+}
+
+#inscripciones .card {
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 10px 25px 0 rgba(6, 12, 34, 0.1);
+}
+
+#inscripciones .card:hover {
+    box-shadow: 0 10px 35px 0 rgba(6, 12, 34, 0.2);
+}
+
+#inscripciones .card hr {
+    margin: 25px 0;
+}
+
+#inscripciones .card .card-title {
+    margin: 10px 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+#inscripciones .card .card-price {
+    font-size: 48px;
+    margin: 0;
+}
+
+#inscripciones .card ul li {
+    margin-bottom: 20px;
+    list-style: none;
+}
+
+#inscripciones .card .text-muted {
+    opacity: 0.7;
+}
+
+#inscripciones .card .btn {
+    font-size: 15px;
+    border-radius: 50px;
+    padding: 10px 40px;
+    transition: all 0.2s;
+    background-color: rgb(0, 54, 220);
+    border: 0;
+    color: #fff;
+}
+
+#inscripciones .card .btn:hover {
+    background-color: rgb(0, 101, 210);
+}
+
+/* #inscripciones #buy-ticket-modal input,
+#inscripciones #buy-ticket-modal select {
+    border-radius: 0;
+}
+
+#inscripciones #buy-ticket-modal .btn {
+    font-size: 15px;
+    border-radius: 50px;
+    padding: 10px 40px;
+    transition: all 0.2s;
+    background-color: #f82249;
+    border: 0;
+    color: #fff;
+}
+
+#inscripciones #buy-ticket-modal .btn:hover {
+    background-color: #e0072f;
+} */
+
+/*--------------------------------------------------------------
+  # Contacto - Formulario Section
+--------------------------------------------------------------*/
+
+#contacto {
+    padding: 60px 0;
+}
+
+#contacto .contacto-info {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#contacto .contacto-info i {
+    font-size: 48px;
+    display: inline-block;
+    margin-bottom: 10px;
+    color: rgb(0, 54, 220);
+}
+
+#contacto .contacto-info p {
+    margin-bottom: 0;
+    color: #112363;
+}
+
+#contacto .contacto-info h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #112363;
+}
+
+#contacto .contacto-address,
+#contacto .contacto-phone,
+#contacto .contacto-email {
+    margin-bottom: 20px;
+}
+
+#contacto .formulario input,
+#contacto .formulario textarea {
+    padding: 10px 14px;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 15px;
+}
+
+#contacto .formulario button[type="submit"] {
+    background-color: rgb(0, 54, 220);
+    border: 0;
+    padding: 10px 40px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+#contacto .formulario button[type="submit"]:hover {
+    background-color: rgb(0, 101, 210);
+}
+
+/*--------------------------------------------------------------
+  # Footer
+  --------------------------------------------------------------*/
+
+#footer {
+    background-color: rgb(0, 33, 135);
+    padding: 0 0 25px 0;
+    color: #eee;
+    font-size: 14px;
+}
+
+#footer .footer-top {
+    background-color: rgb(30, 80, 220);
+    padding: 60px 0 30px 0;
+}
+
+#footer .footer-top .social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    color: rgb(14, 27, 77);
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+
+#footer .footer-top .social-links a:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(30, 80, 220);
+}
+
+#footer .footer-top h4 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #fff;
+}
+
+#footer .footer-top .footer-links {
+    margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#footer .footer-top .footer-links ul i {
+    padding-right: 5px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+}
+
+#footer .footer-top .footer-links ul li {
+    border-bottom: 1px solid rgb(255, 255, 255);
+    padding: 10px 0;
+}
+
+#footer .footer-top .footer-links ul li:first-child {
+    padding-top: 0;
+}
+
+#footer .footer-top .footer-links ul a {
+    color: #eee;
+}
+
+#footer .footer-top .footer-contact {
+    margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-contact p {
+    line-height: 26px;
+}
+
+#footer .copyright {
+    text-align: center;
+    padding-top: 30px;
+}
+
+
+/*--------------------------------------------------------------
+  # Responsive Media Queries
+  --------------------------------------------------------------*/
+
+@media (min-width: 767px) {
+    #subscribe input {
+        min-width: 400px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    #contacto .contacto-address,
+    #contacto .contacto-phone,
+    #contacto .contacto-email {
+        padding: 20px 0;
+    }
+
+    #contacto .contacto-phone {
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+    }
+}
+
+@media (min-width: 991px) {
+    #cronograma .sub-heading {
+        width: 75%;
+    }
+}
+
+@media (min-width: 1024px) {
+    #inicio {
+        background-attachment: fixed;
+    }
+
+    #evento {
+        background-attachment: fixed;
+    }
+
+    #subscribe {
+        background-attachment: fixed;
+    }
+}
+
+@media (max-width: 1199px) {
+    #header .container {
+        max-width: 100%;
+    }
+
+    .nav-menu a {
+        padding: 8px 4px;
+    }
+}
+
+@media (max-width: 991px) {
+    #header {
+        background: rgba(6, 12, 34, 0.98);
+        height: 70px;
+        padding: 15px 0;
+        transition: all 0.5s;
+    }
+
+    #inicio .inicio-container {
+        top: 70px;
+    }
+
+    #inicio h1 {
+        font-size: 34px;
+    }
+
+    #inicio p {
+        font-size: 16px;
+    }
+
+    #cronograma .nav-tabs a {
+        padding: 8px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #faq #faq-list a {
+        font-size: 18px;
+    }
+
+    #faq #faq-list i {
+        top: 13px;
+    }
+}
+
+@media (max-width: 767px) {
+    #cronograma .nav-tabs a {
+        padding: 8px 20px;
+    }
+}
+
+@media (max-width: 574px) {
+    #lugar .lugar-info h3 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    #cronograma .nav-tabs a {
+        padding: 8px 30px;
+    }
+}
+
+@media (max-width: 460px) {
+    #subscribe button {
+        margin-top: 10px;
+    }
+}
